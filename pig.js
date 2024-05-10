@@ -1349,7 +1349,7 @@ exports.POSSIBLE_ROLES = POSSIBLE_ROLES;
       history: [
       ],
     });
-  chatInput.value="";
+  
     const result = await chat.sendMessage(userText);
     const response = result.response;
     
@@ -1415,6 +1415,7 @@ incomingChatDiv.querySelector(".chat-details").appendChild(pElement);
     const outgoingChatDiv=createElement(html,"outgoing");
     outgoingChatDiv.querySelector("p").textContent=userText;
     chatContainer.appendChild(outgoingChatDiv);
+      chatInput.value="";
     setTimeout(showTypingAnimation,500);
   }
   sendButton.addEventListener("click" , handleOutgoingChat);
