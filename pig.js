@@ -1403,6 +1403,7 @@ incomingChatDiv.querySelector(".chat-details").appendChild(pElement);
   
   const handleOutgoingChat=()=>{
   userText=chatInput.value.trim();
+      chatInput.value="";
   if(!userText){
       return;
   }
@@ -1415,7 +1416,7 @@ incomingChatDiv.querySelector(".chat-details").appendChild(pElement);
     const outgoingChatDiv=createElement(html,"outgoing");
     outgoingChatDiv.querySelector("p").textContent=userText;
     chatContainer.appendChild(outgoingChatDiv);
-      chatInput.value="";
+      
     setTimeout(showTypingAnimation,500);
   }
   sendButton.addEventListener("click" , handleOutgoingChat);
